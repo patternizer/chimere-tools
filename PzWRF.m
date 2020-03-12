@@ -1,5 +1,14 @@
 function [z,P]=PzWRF(P0,P1,P2,n)
 
+%--------------------------------------------------------------------------
+% Dr. Michael Taylor: 
+% Laboratory of Atmospheric Physics, Aristotle University of Thessaloniki
+% http://users.auth.gr/mtaylor/
+% email(1): mtaylor@auth.gr
+% email(2): patternizer@gmail.com
+% Version 1.0: 01/06/2016
+%--------------------------------------------------------------------------
+
     nWRF = n;
     p0  = P0; % station   (hPa)
     p1  = P1; % 1st level (hPa)

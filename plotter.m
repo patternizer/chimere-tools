@@ -1,5 +1,14 @@
 clear all; close all; clc;
 
+%--------------------------------------------------------------------------
+% Dr. Michael Taylor: 
+% Laboratory of Atmospheric Physics, Aristotle University of Thessaloniki
+% http://users.auth.gr/mtaylor/
+% email(1): mtaylor@auth.gr
+% email(2): patternizer@gmail.com
+% Version 1.0: 14/06/2016
+%--------------------------------------------------------------------------
+
     line_width          = 2;
     marker_size         = 10;
     font_size           = 18;
