@@ -1,6 +1,8 @@
-![image](https://github.com/patternizer/chimere-tools/T22.jpg)
+![image](https://github.com/patternizer/chimere-tools/WRF_CHIMERE_Temperature_20090312.jpg)
+![image](https://github.com/patternizer/chimere-tools/WRF_CHIMERE_Precipitation_20090312.jpg)
 ![image](https://github.com/patternizer/chimere-tools/HCHO_20130428.jpg)
-![image](https://github.com/patternizer/chimere-tools/SO2.jpg)
+![image](https://github.com/patternizer/chimere-tools/plot_PM25_2d.jpg)
+![image](https://github.com/patternizer/chimere-tools/plot_PM25_3d_video.mp4)
 
 # chimere-tools
 
@@ -11,15 +13,12 @@ atmospheric layer scalars.
 
 ## Contents
 
-* `chimere-tools.py` - main script to be run with Python 3.6+
-* `chimere.nc` - CHIMERE output file in netCDF4 format
-* `ndisp_variables.txt` - metadata file for the output file chimere.nc
-* `set_contour_z_level.m` - calculates the vertical pressure levels used by netcdf_reader.m
-* `netcdf_reader.m` - reads 3D scalar species concentration data from chimere.nc and generates atmospheric layer contours whose vertical separation is determined by set_contour_z_level.m
-* `netcdf_reader2.m` - reads in WRF field (wrfout_filename.nc) and CHIMERE meteorology field (meteo_filename.nc) and overlays Cartesian on Lambertian projection
+* `ndisp_variables.txt` - metadata file for the CHIMERE output file (chimere.nc)
+* `plot_2d_3d_chemical_distributions.m` - reads 3D scalar species concentration data from chimere.nc and generates filled contours as a function of pressure level
+* `plot_HCHO_vertical_profiles.m` - reads in CHIMERE HCHO vertical profile data and co-located GOME2 and OMI profile data and plot per timestamp
+* `plot_CHIMERE_on_WRF_fields.m` - reads in WRF fields (wrfout_filename.nc) and CHIMERE fields (meteo_filename.nc) and overlays Cartesian on Lambertian projection
 * `distinguishable_colors.m` - helper function to set colour map range
 * `PzWRF.m` - function to convert n pressure levels into altitudes in metres
-* `plotter.m` - routine that reads in and plots vertical profiles and corresponding WRF levels in km 
 
 The first step is to clone latest chimere-tools code and step into the check out directory: 
 
@@ -30,9 +29,9 @@ The first step is to clone latest chimere-tools code and step into the check out
 
 The codes should run with a netCDF4 compatible version of Octave or directly at the MATLAB command line: 
 
-    >> netcdf_reader2
-	
-For chemical species names please refer to the long_names of Variables listed in ndisp_variables.txt.
+    >> plot_2d_3d_chemical_distributions
+
+and so on. For chemical species names please refer to the long_names of Variables listed in ndisp_variables.txt.
         
 ## License
 
